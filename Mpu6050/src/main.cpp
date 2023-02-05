@@ -24,14 +24,14 @@ void loop()
   Wire.write(0x3C);
   Wire.endTransmission();
   Wire.requestFrom(MPU6050_ADDR, 14, true);
-  double accX = Wire.read() << 8 | Wire.read();
+  double accY = Wire.read() << 8 | Wire.read();
   Serial.print("AcY = ");
   Serial.println(accX);
 
   Wire.write(0x3D);
   Wire.endTransmission();
   Wire.requestFrom(MPU6050_ADDR, 14, true);
-  double accX = Wire.read() << 8 | Wire.read();
+  double accZ = Wire.read() << 8 | Wire.read();
   Serial.print("AcZ = ");
   Serial.println(accX);
   delay(100);
