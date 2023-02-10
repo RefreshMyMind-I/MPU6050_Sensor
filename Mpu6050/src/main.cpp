@@ -37,7 +37,7 @@ void loop()
   Serial.println(accZ);
   delay(100);
 
-  //simple filter
+  //simple filter this will slow the output by 20 or 30 ms 
   filx = 0.94 * filx + 0.06 * accX;
   fily = 0.94 * fily + 0.06 * accY;
   filz = 0.94 * filz + 0.06 * accZ;
